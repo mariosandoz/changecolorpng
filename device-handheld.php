@@ -14,18 +14,14 @@ header("Content-type: image/png");
 #INIT
 #################
 ob_start();
-require_once dirname(realpath(__DIR__)) . '/configs/config.global.php';
-require_once dirname(realpath(__DIR__)) . '/configs/config.domain.php';
-require_once ALTAMIDES_CONFIG_PATH . '/config.reference.php';
-require_once ALTAMIDES_CONFIG_PATH . '/config.connections.php';
 
 // prevent session locking
 if (session_id() !== '') {
     session_write_close();
 }
 
-$cacheDir     = ALTAMIDES_CACHE_DIR . '/direction-finder-handheld-images';
-$imgSrc = ALTAMIDES_BASE_PATH ."images/spottrax/mobile_df.png";
+$cacheDir     = '/direction-finder-handheld-images';
+$imgSrc = "mobile_df.png";
 
 #################
 #INPUT
